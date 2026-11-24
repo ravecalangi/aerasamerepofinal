@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block admin page from search engines
+Disallow: /admin.html
+
+# Block checkout and order-related pages
+Disallow: /checkout.html
+Disallow: /track-order.html
+
+# Block legal/policy pages (optional — remove if you want them indexed)
+# Disallow: /privacy-notice.html
+# Disallow: /reseller-terms.html
+
+Sitemap: https://www.shop-aera.com/sitemap.xml

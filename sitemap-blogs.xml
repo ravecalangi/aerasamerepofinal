@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This file is a placeholder. Blog post URLs are dynamically generated.
+  See sitemap.xml for the main site sitemap.
+  
+  When you publish blog articles, add entries here manually in this format:
+  
+  <url>
+    <loc>https://www.shop-aera.com/blog-post.html?slug=your-blog-slug</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Add your published blog post entries below -->
+  <!-- Example:
+  <url>
+    <loc>https://www.shop-aera.com/blog-post.html?slug=how-to-use-hair-mist</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  -->
+
+</urlset>

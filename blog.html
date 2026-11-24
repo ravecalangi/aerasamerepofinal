@@ -1,0 +1,662 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon-website.png">
+<title>Blog | AERA</title>
+<meta name="description" content="AERA notes on scent, self-care and everyday rituals. Tips, stories and quiet moments from the AERA team.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.shop-aera.com/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.shop-aera.com/blog.html">
+<meta property="og:title" content="Blog | AERA">
+<meta property="og:description" content="Notes on scent, self-care and everyday rituals from AERA.">
+<meta property="og:image" content="https://www.shop-aera.com/images/main-banner-final.jpg">
+<meta property="og:site_name" content="AERA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | AERA">
+<meta name="twitter:description" content="Notes on scent, self-care and everyday rituals from AERA.">
+<meta name="twitter:image" content="https://www.shop-aera.com/images/main-banner-final.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#384168;--deep:#2a3152;--cream:#f0ede8;--line:rgba(56,65,104,.14);--muted:rgba(56,65,104,.64);--px:clamp(1rem,5vw,5rem)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Instrument Sans",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input{font:inherit}h1,h2,h3{font-family:Urbanist,sans-serif;font-weight:500}.topbar{position:relative;display:flex;align-items:center;justify-content:center;min-height:32px;padding:5px 52px;background:var(--ink);font-size:13px;font-weight:400;letter-spacing:-.01em;text-align:center;color:var(--cream)}
+.topbar a{display:inline-block}.topbar a:hover{text-decoration:underline}
+.tb-close{position:absolute;right:clamp(12px,1.7vw,24px);top:50%;transform:translateY(-50%);width:28px;height:28px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--cream);cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.tb-close:hover{background:rgba(240,237,232,.15)}.tb-close svg{width:14px;height:14px}
+@media(max-width:639px){.topbar{font-size:12.5px;padding:8px 44px}}
+.logo{display:block;width:60px;height:auto}
+.nav .logo,.m-menu .logo{filter:brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(600%) hue-rotate(200deg) brightness(80%) contrast(95%)}
+.nav{position:sticky;z-index:500;top:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 clamp(16px,2.5vw,40px);height:68px;pointer-events:none;transition:background .2s,box-shadow .2s;background:var(--cream);border-bottom:1px solid rgba(42,49,82,.1)}
+.nav.sticky{background:rgba(253,248,243,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 2px 12px rgba(42,49,82,.06)}
+.nav-logo-wrap{pointer-events:auto;justify-self:start}
+.nav-links-center{pointer-events:auto;display:flex;align-items:center;gap:clamp(16px,2.5vw,36px);font-size:.875rem;color:var(--ink)}
+.nav-links-center a{font-weight:400;opacity:1;letter-spacing:.03em;transition:opacity .2s}.nav-links-center a:hover{opacity:.65}
+.nav-links-center a::after{content:attr(data-text);content:attr(data-text,"");display:block;font-weight:600;height:0;overflow:hidden;visibility:hidden;pointer-events:none}
+.nav-links-center a.active{font-weight:600;opacity:1}
+.nav-icons-right{pointer-events:auto;justify-self:end;display:flex;align-items:center;gap:10px}
+.nav-icon-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(56,65,104,.08);background:rgba(253,248,243,.7);display:grid;place-items:center;cursor:pointer;transition:background .2s;backdrop-filter:blur(4px);color:var(--ink);padding:0}
+.nav-icon-btn:hover{background:#fdf8f3}
+.nav-dropdown{display:flex;align-items:center;height:68px}
+.nav-links-center a.dd{display:inline-flex;align-items:center;gap:8px}
+.nav-links-center a.dd::after{
+  content:"";display:block;
+  width:6px;height:6px;
+  margin:-3px 0 0;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg);
+  visibility:visible;overflow:visible;
+  font-weight:400;
+  transition:transform .22s ease;
+}
+/* arrow flips up while the dropdown is open */
+.nav-dropdown:hover a.dd::after,
+.nav-dropdown:focus-within a.dd::after{transform:translateY(3px) rotate(225deg)}
+.dropdown-panel{display:grid;position:absolute;top:100%;left:50%;margin-top:6px;width:min(860px,90vw);background:#fdf8f3;border-radius:16px;box-shadow:0 8px 40px rgba(42,49,82,.14);padding:2rem;grid-template-columns:repeat(4,1fr);gap:1.5rem;z-index:600;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,-8px);transition:opacity .22s ease,transform .22s ease,visibility 0s linear .22s}
+.dropdown-panel::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+.nav-dropdown:hover .dropdown-panel,.nav-dropdown:focus-within .dropdown-panel{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0);transition:opacity .22s ease,transform .22s ease,visibility 0s}
+.dropdown-heading{margin:0 0 .75rem;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(56,65,104,.55)}
+.dropdown-panel a{display:block;font-size:.875rem;color:var(--ink);padding:.3rem 0;transition:opacity .15s}.dropdown-panel a:hover{opacity:.5}
+.dropdown-featured .dropdown-sub{margin:0 0 1rem;font-size:.8125rem;color:rgba(56,65,104,.65);line-height:1.5}
+.dropdown-cta{display:inline-flex !important;align-items:center;height:36px;padding:0 1.25rem !important;background:var(--ink);color:#fff !important;border-radius:9999px;font-size:.8125rem !important;font-weight:500;transition:background .2s !important}
+.dropdown-cta:hover{background:var(--deep);opacity:1 !important}
+.cart-btn{position:relative}
+.cart-count{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:#fff;font-size:9px;font-weight:700;display:grid;place-items:center;line-height:1}
+.m-burger,.m-menu{display:none}
+@media(max-width:1023px){
+.nav{grid-template-columns:1fr auto}.nav-links-center{display:none}
+.m-burger{display:grid;width:36px;height:36px;border-radius:50%;border:1px solid rgba(56,65,104,.08);background:rgba(253,248,243,.7);place-items:center;cursor:pointer;color:var(--ink);padding:0}
+.m-menu{position:fixed;inset:0;z-index:800;background:#fdf8f3;padding:0 1.5rem 2rem;flex-direction:column;overflow-y:auto;display:flex;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease,visibility 0s linear .25s}
+.m-menu.open{opacity:1;visibility:visible;transform:none;transition:opacity .25s ease,transform .25s ease,visibility 0s}
+.m-menu-head{display:flex;align-items:center;justify-content:space-between;height:68px;flex-shrink:0;border-bottom:1px solid rgba(56,65,104,.12);margin-top:1rem}
+.m-menu-head .m-link{border-bottom:none!important;padding:0!important}
+.m-close{width:36px;height:36px;border-radius:50%;border:1px solid rgba(56,65,104,.15);background:none;display:grid;place-items:center;cursor:pointer;color:var(--ink);padding:0}
+.m-menu a.m-link{display:block;padding:1rem 0;font-family:Urbanist,Arial,sans-serif;font-size:1.75rem;font-weight:500;color:var(--ink);border-bottom:1px solid rgba(56,65,104,.12)}
+.m-menu .m-sub{display:flex;flex-wrap:wrap;gap:.5rem;padding:.9rem 0 .4rem}
+.m-menu .m-sub a{font-size:.8125rem;padding:.4rem .9rem;border:1px solid rgba(56,65,104,.3);border-radius:9999px;color:var(--ink)}
+.m-menu .m-cta{margin-top:1.75rem;align-self:flex-start}}
+@media(min-width:640px) and (max-width:1023px){.nav{padding:0 2rem}}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:900;opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.cart-overlay.open{opacity:1;visibility:visible;transition:opacity .3s}
+.cart-drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:#fff;z-index:901;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:-4px 0 24px rgba(0,0,0,.12)}
+.cart-drawer.open{transform:translateX(0)}
+.cart-drawer-head{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid rgba(56,65,104,.1)}
+.cart-drawer-head h3{margin:0;font-family:"Instrument Sans",sans-serif;font-size:1rem;font-weight:600;letter-spacing:.04em}
+.cart-close{background:none;border:none;cursor:pointer;padding:6px;border-radius:50%;display:grid;place-items:center;transition:background .2s;color:var(--ink)}.cart-close:hover{background:rgba(56,65,104,.08)}
+.cart-body{flex:1;overflow-y:auto;padding:1.5rem}.cart-empty{text-align:center;color:rgba(56,65,104,.5);margin-top:4rem;font-size:.9375rem}
+.cart-footer{padding:1.25rem 1.5rem;border-top:1px solid rgba(56,65,104,.1)}
+.cart-footer button{width:100%;height:48px;border:none;border-radius:9999px;background:var(--ink);color:#fff;font:inherit;font-size:.9375rem;font-weight:600;cursor:pointer;transition:background .2s}.cart-footer button:hover{background:var(--deep)}
+.cart-line{display:flex;justify-content:space-between;align-items:baseline;font-size:.9375rem;margin-bottom:.5rem}.cart-line strong{font-size:1.0625rem}
+.cart-ship{color:rgba(56,65,104,.65);font-size:.875rem}.cart-note{margin:0 0 1rem;font-size:.8125rem;color:rgba(56,65,104,.55);line-height:1.5}
+.wrap{max-width:80rem;margin:auto;padding:0 var(--px)}.intro{text-align:center;padding:3.5rem 1rem 2.5rem}.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;color:var(--muted)}.intro h1{font-size:clamp(2.7rem,7vw,5rem);margin:.7rem 0 1rem}.intro p{max-width:35rem;margin:auto;line-height:1.7;color:var(--muted)}.featured{display:none;grid-template-columns:1.35fr 1fr;background:#fff;border:1px solid var(--line);border-radius:1.5rem;overflow:hidden;margin-bottom:3rem}.featured-img{min-height:360px;background:#e8e4de center/cover no-repeat}.featured-body{padding:clamp(1.5rem,4vw,3rem);display:flex;flex-direction:column;justify-content:center;gap:1rem}.badge{display:inline-block;width:max-content;background:rgba(56,65,104,.08);border-radius:99px;padding:.35rem .7rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}.featured h2{font-size:clamp(1.8rem,4vw,3rem);margin:0;line-height:1.1}.excerpt{color:var(--muted);line-height:1.7}.meta{color:var(--muted);font-size:.8rem;display:flex;gap:1rem;flex-wrap:wrap}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin:0 0 2rem;padding:1rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.filters{display:flex;gap:.45rem;flex-wrap:wrap}.filter{border:1px solid var(--line);background:none;border-radius:99px;padding:.55rem 1rem;color:var(--muted);cursor:pointer}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:#fff}.search{height:42px;width:min(280px,100%);border:1px solid var(--line);border-radius:99px;background:#fff;padding:0 1rem;color:var(--ink)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;padding-bottom:2rem}@media(min-width:680px){.grid{grid-template-columns:repeat(3,1fr);gap:1.4rem}}@media(min-width:1024px){.grid{grid-template-columns:repeat(4,1fr)}}.card{background:#fff;border:1px solid var(--line);border-radius:1rem;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s}.card:hover{transform:translateY(-4px)}.card-img{aspect-ratio:3/2;background:#e8e4de center/cover no-repeat}.card-body{padding:1rem;display:flex;flex-direction:column;gap:.55rem;flex:1}.card h3{margin:0;font-size:1.1rem;line-height:1.25}.card p{margin:0;color:var(--muted);line-height:1.55;font-size:.86rem}.card .meta{margin-top:auto;padding-top:.45rem}.load{text-align:center;padding:1.5rem 0 5rem}.load button{border:1px solid var(--ink);background:none;border-radius:99px;padding:.75rem 1.5rem;color:var(--ink);cursor:pointer}.empty{text-align:center;color:var(--muted);padding:4rem 1rem;display:none}.footer{background:var(--ink);color:var(--cream);padding:4rem var(--px) 2rem;margin-top:3rem}.footer-inner{max-width:80rem;margin:auto;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}.footer p{color:rgba(240,237,232,.7);line-height:1.6}.footer nav{display:flex;gap:1rem;flex-wrap:wrap}.footer nav a{text-decoration:underline}@media(max-width:720px){
+  .toolbar{flex-direction:column;align-items:stretch;gap:.75rem;padding:.75rem 0}
+  .filters{display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:.5rem;margin:0 calc(-1 * var(--px));padding:0 var(--px) .35rem}
+  .filters::-webkit-scrollbar{display:none}
+  .filter{flex-shrink:0;white-space:nowrap}
+  .search{width:100%;max-width:none}
+}
+.card-img:not([style]){display:grid;place-items:center;background:#e8e4de;color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}.card-img:not([style])::before{content:"No image uploaded"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.featured{display:none!important}.grid{display:flex;flex-direction:column;gap:0;max-width:60rem;margin:0 auto;padding-bottom:2rem}.card{display:grid;grid-template-columns:150px 1fr;gap:1.5rem;align-items:center;background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:1.6rem 0;transition:none}.card:last-child{border-bottom:1px solid var(--line)}.card:hover{transform:none}.card-img{width:150px;height:100px;aspect-ratio:auto;border-radius:12px;background-size:cover;background-position:center;background-repeat:no-repeat}.card-body{padding:0;gap:.45rem}.card h3{font-size:1.35rem}.card p{font-size:.95rem;line-height:1.5}.card .meta{margin-top:.2rem;padding-top:0}.card .badge{display:none}.card-body::after{content:"Read \2192";display:block;margin-top:.35rem;font-size:.8rem;color:var(--ink)}@media(max-width:600px){.card{grid-template-columns:100px 1fr;gap:1rem;padding:1.2rem 0}.card-img{width:100px;height:76px}.card h3{font-size:1.05rem}.card p{font-size:.82rem}.card-body::after{font-size:.75rem}}.newsletter{padding:0 1rem 6rem}.nl-card{max-width:80rem;margin:auto;background:var(--ink);border-radius:24px;padding:3rem 1.5rem;display:grid;gap:1.75rem;align-items:center;color:var(--cream)}.nl-label{margin:0 0 .6rem;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,237,232,.7)}.nl-text h2{margin:0 0 .75rem;font-size:2rem;line-height:1.15}.nl-text p:last-child{margin:0;max-width:30rem;line-height:1.6;font-size:.9375rem;color:var(--cream)}.nl-form{display:flex;gap:.5rem;flex-wrap:wrap}.nl-form input{flex:1 1 220px;height:52px;padding:0 1.25rem;border:1px solid transparent;border-radius:30px;background:var(--cream);color:var(--ink)}.nl-form button{height:52px;padding:0 2rem;border:0;border-radius:30px;background:var(--cream);color:var(--ink);font-weight:500;cursor:pointer}.form-msg{flex-basis:100%;margin:.25rem 0 0;min-height:1.2em}.contact{background:var(--ink);color:var(--cream);padding:5rem 1rem 0}.ct-in{max-width:80rem;margin:auto;display:grid;gap:3rem}.ct-info .logo{width:120px}.ct-info h2{margin:1.5rem 0 .75rem;font-size:2.25rem;line-height:1.15}.ct-info>p{margin:0 0 1.75rem;max-width:28rem;line-height:1.7;color:rgba(240,237,232,.75)}.ct-list{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;gap:.9rem}.ct-list li{display:flex;gap:1rem;align-items:baseline}.ct-list span{min-width:4.5rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,232,.6)}.ct-list a:hover{text-decoration:underline}.ct-social{display:flex;gap:.5rem;flex-wrap:wrap}.ct-social a{padding:.45rem 1rem;border:1px solid rgba(240,237,232,.35);border-radius:9999px;font-size:.8125rem;transition:background .2s,color .2s}.ct-social a:hover{background:var(--cream);color:var(--ink)}.ct-form{display:grid;gap:.9rem;align-content:start}.ct-form label{display:grid;gap:.4rem;font-size:.8125rem;color:rgba(240,237,232,.8)}.ct-form input,.ct-form textarea{width:100%;padding:.85rem 1.1rem;border:1px solid rgba(240,237,232,.3);border-radius:16px;background:rgba(240,237,232,.08);color:var(--cream);font:inherit}.ct-form textarea{min-height:120px;resize:vertical}.ct-form input::placeholder,.ct-form textarea::placeholder{color:rgba(240,237,232,.45)}.ct-form button{justify-self:start;height:52px;padding:0 2rem;border:0;border-radius:30px;background:var(--cream);color:var(--ink);font-weight:600;cursor:pointer}.ct-bottom{max-width:80rem;margin:2.5rem auto 0;padding:1.5rem 0 2rem;border-top:1px solid rgba(240,237,232,.18);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.8125rem;color:rgba(240,237,232,.6)}.ct-bottom nav{display:flex;gap:1.25rem;flex-wrap:wrap}.ct-bottom a:hover{color:var(--cream)}@media(min-width:900px){.nl-card{grid-template-columns:1.1fr 1fr;padding:3.5rem 4rem;gap:3rem}.nl-text h2{font-size:2.5rem}.contact{padding:6rem 4rem 0}.ct-in{grid-template-columns:1fr 1fr;gap:5rem}.ct-info h2{font-size:2.75rem}}@media(max-width:639px){.nl-card{padding:2.25rem 1.25rem}.nl-form input,.nl-form button{flex:1 1 100%;width:100%}.contact{padding-top:3.5rem}.ct-info h2{font-size:2rem}.ct-list li{flex-direction:column;gap:.15rem}.ct-form button{justify-self:stretch}.ct-bottom{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="topbar" id="topbar"><a href="shop.html">Bloom is here: our garden-party launch collection</a><button class="tb-close" id="tbClose" type="button" aria-label="Close announcement"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+<header class="nav" id="mainNav">
+<div class="nav-logo-wrap"><a href="index.html" aria-label="AERA home"><img src="images/aera-logo-black.png" class="logo" alt="AERA"></a></div>
+<nav class="nav-links-center">
+<a href="index.html" data-text="Home">Home</a>
+<div class="nav-dropdown"><a href="shop.html" class="dd" data-text="Shop">Shop</a><div class="dropdown-panel">
+<div class="dropdown-col"><p class="dropdown-heading">Hair &amp; Body Mists</p><a href="shop.html#mist" onclick="try{sessionStorage.setItem('aera-shop-filter','mist')}catch(e){}">No Fixed Plans</a><a href="shop.html#mist" onclick="try{sessionStorage.setItem('aera-shop-filter','mist')}catch(e){}">White Shirt</a><a href="shop.html#mist" onclick="try{sessionStorage.setItem('aera-shop-filter','mist')}catch(e){}">First Flowers</a><a href="shop.html#mist" onclick="try{sessionStorage.setItem('aera-shop-filter','mist')}catch(e){}">Open Windows</a><a href="shop.html#mist" onclick="try{sessionStorage.setItem('aera-shop-filter','mist')}catch(e){}">After Hours</a></div>
+<div class="dropdown-col"><p class="dropdown-heading">Soaps</p><a href="shop.html#soap" onclick="try{sessionStorage.setItem('aera-shop-filter','soap')}catch(e){}">Tea Tree Soap</a><a href="shop.html#soap" onclick="try{sessionStorage.setItem('aera-shop-filter','soap')}catch(e){}">Triple Whitening Soap</a></div>
+<div class="dropdown-col"><p class="dropdown-heading">Body Serum</p><a href="shop.html#serum" onclick="try{sessionStorage.setItem('aera-shop-filter','serum')}catch(e){}">Second Skin Body Serum</a></div>
+<div class="dropdown-col dropdown-featured"><p class="dropdown-heading">Featured</p><p class="dropdown-sub">New arrivals and bestsellers from AERA.</p><a href="shop.html" class="dropdown-cta">Shop All</a></div></div></div>
+<a href="about.html" data-text="About Us">About Us</a>
+<a href="blog.html" class="active" data-text="Blog">Blog</a><a href="track-order.html" data-text="Track my order">Track my order</a>
+<div class="nav-dropdown"><a href="circle.html" class="dd" data-text="AERA Circle">AERA Circle</a><div class="dropdown-panel" style="grid-template-columns:repeat(3,1fr)">
+<div class="dropdown-col"><p class="dropdown-heading">Reseller Program</p><a href="circle.html#tiers">Program tiers</a><a href="circle.html#tiers">Discount structure</a><a href="reseller-terms.html">Terms &amp; conditions</a></div>
+<div class="dropdown-col"><p class="dropdown-heading">Get Started</p><a href="reseller-apply.html">Apply now</a><a href="reseller.html">Reseller portal login</a><a href="blog.html#contact">Contact us</a></div>
+<div class="dropdown-col dropdown-featured"><p class="dropdown-heading">Join AERA Circle</p><p class="dropdown-sub">Become an AERA reseller and share our products with your community.</p><a href="reseller-apply.html" class="dropdown-cta">Apply to join</a></div></div></div>
+</nav>
+<div class="nav-icons-right">
+<button class="nav-icon-btn" aria-label="Search" onclick="var s=document.getElementById('search');if(s){s.focus();s.scrollIntoView({behavior:'smooth',block:'center'});}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+<button class="nav-icon-btn cart-btn" aria-label="Shopping bag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-count">0</span></button>
+</div>
+</header>
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping cart" aria-modal="true"><div class="cart-drawer-head"><h3>Your Bag <span class="cart-count-label">(0)</span></h3><button class="cart-close" id="cartClose" aria-label="Close cart"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+<div class="cart-body" id="cartBody"><p class="cart-empty">Your bag is empty.</p></div>
+<div class="cart-footer"><div class="cart-line"><span>Subtotal</span><strong id="cartSubtotal">&#8369;0</strong></div><div class="cart-line cart-ship"><span>Shipping</span><span>Calculated at checkout</span></div><p class="cart-note">Your delivery address determines the shipping fee.</p><button type="button" onclick="window.location.href='checkout.html'">Checkout</button></div></div>
+<main class="wrap" style="padding-top:2rem">
+<section class="intro" id="journalIntro" style="display:none"><p class="eyebrow">The AERA journal</p><h1>Stay a little longer.</h1><p>Thoughts on scent, self-care and the small rituals that make ordinary moments feel special.</p></section>
+<a class="featured" id="featured" href="#"><div class="featured-img" id="featuredImg"></div><div class="featured-body"><span class="badge" id="featuredCat"></span><h2 id="featuredTitle"></h2><p class="excerpt" id="featuredExcerpt"></p><div class="meta"><span id="featuredDate"></span></div><strong>Read the story &#8594;</strong></div></a>
+<section class="grid" id="grid" aria-live="polite"></section>
+<section class="grid" id="grid" aria-live="polite"></section><div class="empty" id="empty">No published stories match your search.</div><div class="load"><button id="loadMore" hidden>Load more</button></div>
+</main>
+<footer class="contact" id="contact"><div class="ct-in"><div class="ct-info"><img src="images/aera-logo-black.png" class="logo" alt="AERA" style="filter:invert(1)"><h2>Contact us</h2><p>Questions about our products, how to order, or AERA Circle? Send us a message and we'll get back to you.</p><ul class="ct-list"><li><span>Email</span><a href="mailto:contactaeraofficial@gmail.com">contactaeraofficial@gmail.com</a></li></ul><div class="ct-social"><a href="https://www.instagram.com/aeraclucofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@aeraclucofficial" target="_blank" rel="noopener">TikTok</a><a href="https://www.facebook.com/thisisaera" target="_blank" rel="noopener">Facebook</a></div></div><form class="ct-form" id="ctForm"><label>Your name<input type="text" name="name" placeholder="Name" required></label><label>Email address<input type="email" name="email" placeholder="your@email.com" required></label><label>Subject<input type="text" name="subject" placeholder="How can we help?" required></label><label>Phone<input type="tel" name="phone" placeholder="+63 ..." required></label><label>Message<textarea name="message" placeholder="Tell us about your question or order" required></textarea></label><button type="submit">Send message</button><p class="form-msg" id="ctMsg" role="status"></p></form></div><div class="ct-bottom"><span>© 2026 AERA. All rights reserved.</span><nav><a href="privacy-notice.html">Privacy Notice</a><a href="shipping-delivery.html">Shipping &amp; Delivery</a><a href="reseller-terms.html">Reseller Terms &amp; Conditions</a><a href="about.html">About Us</a><a href="circle.html">AERA Circle</a><a href="index.html#faq">FAQs</a></nav></div></footer>
+<script>
+(function(){
+  var AERA_API='https://vhyveinrqamzycixhjsu.supabase.co/functions/v1/aera-api';
+  var SUPA_KEY=window.AERA_SUPABASE_KEY || 'sb_publishable_Bdq_PnkKKZfnoqwBkcqrAg_Np412yu3';
+  function wire(id,msg,text){
+    var f=document.getElementById(id),m=document.getElementById(msg);
+    if(!f||!m)return;
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=f.querySelector('button');
+      if(btn) btn.disabled=true;
+      m.textContent='Sending...';
+      var data=new FormData(f),payload={action:'contact'};
+      data.forEach(function(v,k){payload[k]=v;});
+      fetch(AERA_API,{method:'POST',headers:{'Content-Type':'application/json','apikey':SUPA_KEY},body:JSON.stringify(payload)})
+        .then(function(r){return r.json().then(function(x){if(!r.ok)throw Error(x.error||'Unable to send.');return x;});})
+        .then(function(x){m.textContent=x.message||text;f.reset();})
+        .catch(function(err){m.textContent=err.message;})
+        .finally(function(){if(btn) btn.disabled=false;});
+    });
+  }
+  wire('ctForm','ctMsg','Thanks! We got your message and will get back to you soon.');
+  var url=window.AERA_SUPABASE_URL||'https://vhyveinrqamzycixhjsu.supabase.co',key=window.AERA_SUPABASE_KEY||'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZoeXZlaW5ycWFtenljaXhoanN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMzNDk3ODUsImV4cCI6MjEwODkyNTc4NX0.dQDb_5JD7ZUstWoOMdeDWVOynQ_ut9_mNu8yCO5XmPE',size=9,offset=0,category='',query='';
+  var $=function(id){return document.getElementById(id)}, esc=function(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML};
+  var tb=document.getElementById("topbar");if(tb){(function(){if(localStorage.getItem('aera-topbar-closed')==='1'){tb.style.display='none';}var tbc=document.getElementById("tbClose");if(tbc)tbc.addEventListener("click",function(){tb.style.display="none";localStorage.setItem('aera-topbar-closed','1');});window.addEventListener('storage',function(e){if(e.key==='aera-topbar-closed'){tb.style.display=e.newValue==='1'?'none':'';}});})();}
+  function get(path){return fetch(url+path,{headers:{apikey:key,Authorization:'Bearer '+key,'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(data){if(!Array.isArray(data)){console.error('Supabase error:',JSON.stringify(data));}return data;})}
+  get('/rest/v1/site_content?select=key,value&key=in.(topbar_text,topbar_active,theme_primary,theme_deep,theme_background)').then(function(rows){
+    if(!Array.isArray(rows)) return;
+    rows.forEach(function(row){
+      if(row.key==='topbar_active'&&row.value==='false'){var t=document.querySelector('.topbar');if(t)t.style.display='none';}
+      if(row.key==='topbar_text'){var a=document.querySelector('.topbar a');if(a){a.textContent=row.value;a.style.visibility='';}}
+      if(row.key==='theme_primary'){document.documentElement.style.setProperty('--ink',row.value);document.documentElement.style.setProperty('--brown',row.value);}
+      if(row.key==='theme_deep'){document.documentElement.style.setProperty('--deep',row.value);}
+      if(row.key==='theme_background'){document.documentElement.style.setProperty('--cream',row.value);}
+    });
+  }).catch(function(){});
+  function date(v){return v?new Date(v).toLocaleDateString('en-PH',{month:'short',day:'numeric',year:'numeric'}):''}
+  function card(p){
+    var a=document.createElement('a');
+    a.className='card';
+    a.href='blog-post.html?slug='+encodeURIComponent(p.slug);
+    var img=document.createElement('div');
+    img.className='card-img';
+    if(p.featured_image_url){
+      img.style.backgroundImage='url('+JSON.stringify(p.featured_image_url)+')';
+    }
+    var body=document.createElement('div');
+    body.className='card-body';
+    body.innerHTML='<span class="badge">'+esc(p.category||'Journal')+'</span><h3>'+esc(p.title)+'</h3><p>'+esc((p.excerpt||'').slice(0,140))+'</p><div class="meta"><span>'+date(p.published_at)+'</span></div>';
+    a.appendChild(img);
+    a.appendChild(body);
+    return a;
+  }
+  function load(reset){if(reset){offset=0;$('grid').innerHTML='';$('empty').textContent='Loading...';$('empty').style.display='block';if($('journalIntro'))$('journalIntro').style.display='none'}var q='?select=id,title,slug,excerpt,category,author,featured_image_url,published_at&order=published_at.desc.nullslast&limit='+size+'&offset='+offset;if(category)q+='&category=eq.'+encodeURIComponent(category);if(query)q+='&or=(title.ilike.*'+encodeURIComponent(query)+'*,excerpt.ilike.*'+encodeURIComponent(query)+'*)';get('/rest/v1/blogs'+q).then(function(rows){if(!Array.isArray(rows)){$('empty').textContent='Error: '+(rows&&rows.message?rows.message:JSON.stringify(rows));$('empty').style.display='block';$('loadMore').hidden=true;return;}rows.forEach(function(p){$('grid').appendChild(card(p))});var hasCards=$('grid').children.length>0;$('empty').style.display=hasCards?'none':'block';$('empty').textContent='No published stories yet.';if($('journalIntro'))$('journalIntro').style.display=hasCards?'none':'';offset+=rows.length;$('loadMore').hidden=rows.length<size}).catch(function(err){console.error('Blog load error:',err);$('empty').textContent='Failed to load: '+err.message;$('empty').style.display='block';$('loadMore').hidden=true;})}
+  function categories(){get('/rest/v1/blog_categories?select=name,slug&order=name.asc').then(function(rows){rows.forEach(addCategory)}).catch(function(){});function addCategory(c){var b=document.createElement('button');b.className='filter';b.textContent=c.name;b.dataset.category=c.slug;b.onclick=function(){category=c.slug;document.querySelectorAll('.filter').forEach(function(x){x.classList.toggle('active',x===b)});load(true)};$('filters').appendChild(b)}}
+  function featured(){get('/rest/v1/blogs?select=*&status=eq.published&featured=eq.true&featured_image_url=neq.&order=published_at.desc.nullslast&limit=1').then(function(rows){if(!rows.length){$('featured').style.display='none';return}var p=rows[0];$('featured').style.display='grid';$('featured').href='blog-post.html?slug='+encodeURIComponent(p.slug);$('featuredImg').style.backgroundImage='url('+JSON.stringify(p.featured_image_url)+')';$('featuredCat').textContent=p.category||'Journal';$('featuredTitle').textContent=p.title;$('featuredExcerpt').textContent=p.excerpt||'';$('featuredDate').textContent=date(p.published_at)}).catch(function(){})}
+  var timer; $('loadMore').onclick=function(){load(false)};featured();load(true);
+  /* cart drawer & mobile menu */
+  var items=[];try{items=JSON.parse(localStorage.getItem("aeraCart")||"[]")}catch(e){}
+  var cd=document.getElementById("cartDrawer"),co=document.getElementById("cartOverlay");
+  function openCart(){if(cd&&co){cd.classList.add("open");co.classList.add("open");document.body.style.overflow="hidden"}}
+  function closeCart(){if(cd&&co){cd.classList.remove("open");co.classList.remove("open");document.body.style.overflow=""}}
+  var cb=document.querySelector(".cart-btn");if(cb)cb.addEventListener("click",function(e){e.preventDefault();openCart()});
+  var cc=document.getElementById("cartClose");if(cc)cc.addEventListener("click",closeCart);
+  if(co)co.addEventListener("click",closeCart);
+  function saveCart(){try{localStorage.setItem("aeraCart",JSON.stringify(items))}catch(e){}}
+  function uiCart(){var b=document.getElementById("cartBody");if(!b)return;
+  var t=items.reduce(function(s,i){return s+i.qty},0),sub=items.reduce(function(s,i){return s+i.price*i.qty},0);
+  var st=document.getElementById("cartSubtotal");if(st)st.textContent="&#8369;"+sub.toLocaleString("en-PH");
+  document.querySelectorAll(".cart-count").forEach(function(e){e.textContent=t});
+  var ccl=document.querySelector(".cart-count-label");if(ccl)ccl.textContent="("+t+")";
+  if(!items.length){b.innerHTML='<p class="cart-empty">Your bag is empty.</p>';return}
+  b.innerHTML="";items.forEach(function(it,idx){var d=document.createElement("div");d.style.cssText="display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(56,65,104,.08)";
+  d.innerHTML='<img style="width:64px;height:64px;object-fit:cover;border-radius:8px;flex-shrink:0"><div style="flex:1;min-width:0"><p style="margin:0;font-size:.9rem;font-weight:500"></p><p style="margin:2px 0 0;font-size:.8rem;color:rgba(56,65,104,.5)"></p><p style="margin:4px 0 0;font-size:.85rem;font-weight:500"></p><div style="display:flex;align-items:center;gap:8px;margin-top:8px"><button data-d="-1" style="width:24px;height:24px;border-radius:50%;border:1px solid rgba(56,65,104,.2);background:none;cursor:pointer;color:inherit">âˆ&rsquo;</button><span style="font-size:.9rem;font-weight:500"></span><button data-d="1" style="width:24px;height:24px;border-radius:50%;border:1px solid rgba(56,65,104,.2);background:none;cursor:pointer;color:inherit">+</button></div></div><button data-rm style="background:none;border:none;cursor:pointer;padding:4px;opacity:.4;color:inherit">·</button>';
+  var im=d.querySelector("img");im.src=it.img;im.alt=it.name;var p=d.querySelectorAll("p");p[0].textContent=it.name;p[1].textContent=it.meta;p[2].textContent="&#8369;"+it.price.toLocaleString("en-PH");d.querySelector("span").textContent=it.qty;
+  d.querySelectorAll("[data-d]").forEach(function(x){x.onclick=function(){it.qty+=+x.dataset.d;if(it.qty<=0)items.splice(idx,1);saveCart();uiCart()}});d.querySelector("[data-rm]").onclick=function(){items.splice(idx,1);saveCart();uiCart()};b.appendChild(d)})}
+  uiCart();
+
+  /* mobile menu */
+  var icons=document.querySelector(".nav-icons-right");
+  if(icons){
+    var bg=document.createElement("button");bg.className="m-burger";bg.type="button";bg.setAttribute("aria-label","Open menu");bg.setAttribute("aria-expanded","false");
+    bg.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';icons.appendChild(bg);
+    var mm=document.createElement("div");mm.className="m-menu";mm.setAttribute("aria-hidden","true");
+    mm.innerHTML='<div class="m-menu-head"><a class="m-link" href="index.html">Home</a><button class="m-close" type="button" aria-label="Close menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div><a class="m-link" href="shop.html">Shop</a><div class="m-sub"><a href="shop.html#mist" onclick="try{sessionStorage.setItem(\'aera-shop-filter\',\'mist\')}catch(e){}">Hair &amp; Body Mists</a><a href="shop.html#soap" onclick="try{sessionStorage.setItem(\'aera-shop-filter\',\'soap\')}catch(e){}">Soaps</a><a href="shop.html#serum" onclick="try{sessionStorage.setItem(\'aera-shop-filter\',\'serum\')}catch(e){}">Body Serum</a></div><a class="m-link" href="about.html">About Us</a><a class="m-link" href="blog.html">Blog</a><a class="m-link" href="track-order.html">Track my order</a><a class="m-link" href="circle.html">AERA Circle</a><a class="m-link" href="reseller.html">Reseller Login</a>';
+    document.body.appendChild(mm);
+    function mo(o){mm.classList.toggle("open",o);mm.setAttribute("aria-hidden",o?"false":"true");bg.setAttribute("aria-expanded",o?"true":"false");document.body.style.overflow=o?"hidden":""}
+    bg.addEventListener("click",function(){mo(true)});mm.querySelector(".m-close").addEventListener("click",function(){mo(false)});mm.addEventListener("click",function(e){if(e.target.closest("a"))mo(false)});
+    window.addEventListener("resize",function(){if(innerWidth>=1024)mo(false)});
+  }
+})();
+</script>
+<script>
+/* Dynamic Shop Dropdown - Load products from Supabase */
+(function(){
+  var SUPA_URL='https://vhyveinrqamzycixhjsu.supabase.co';
+  var SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZoeXZlaW5ycWFtenljaXhoanN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMzNDk3ODUsImV4cCI6MjEwODkyNTc4NX0.dQDb_5JD7ZUstWoOMdeDWVOynQ_ut9_mNu8yCO5XmPE';
+  
+  fetch(SUPA_URL+'/rest/v1/products?select=id,name,category&active=eq.true&order=created_at.asc',{
+    headers:{'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY}
+  })
+  .then(function(r){return r.json();})
+  .then(function(data){
+    var mists = data.filter(function(p){ return p.category === 'mist'; });
+    var soaps = data.filter(function(p){ return p.category === 'soap'; });
+    var serums = data.filter(function(p){ return p.category === 'serum'; });
+    
+    var dropdownPanel = document.querySelector('.nav-dropdown .dropdown-panel');
+    if(!dropdownPanel) return;
+    
+    var html = '';
+    
+    if(mists.length > 0){
+      html += '<div class="dropdown-col"><p class="dropdown-heading">Hair &amp; Body Mists</p>';
+      mists.forEach(function(p){
+        html += '<a href="product.html?p='+p.id+'">'+p.name+'</a>';
+      });
+      html += '</div>';
+    }
+    
+    if(soaps.length > 0){
+      html += '<div class="dropdown-col"><p class="dropdown-heading">Soaps</p>';
+      soaps.forEach(function(p){
+        html += '<a href="product.html?p='+p.id+'">'+p.name+'</a>';
+      });
+      html += '</div>';
+    }
+    
+    if(serums.length > 0){
+      html += '<div class="dropdown-col"><p class="dropdown-heading">Body Serum</p>';
+      serums.forEach(function(p){
+        html += '<a href="product.html?p='+p.id+'">'+p.name+'</a>';
+      });
+      html += '</div>';
+    }
+    
+    html += '<div class="dropdown-col dropdown-featured"><p class="dropdown-heading">Featured</p><p class="dropdown-sub">New arrivals and bestsellers from AERA.</p><a href="shop.html" class="dropdown-cta">Shop All</a></div>';
+    
+    dropdownPanel.innerHTML = html;
+  })
+  .catch(function(){});
+})();
+</script>
+<!-- ============================================================
+     AERA CHAT WIDGET
+     ============================================================ -->
+<style>
+:root{--kmc-bg:#ffffff;--kmc-bg2:#f9f9fb;--kmc-text:#111111;--kmc-text3:#888899;--kmc-border:#e8e8ef;--kmc-card:#ffffff;}
+.kmc-toggle-wrapper,.kmc-panel,.kmc-toggle-wrapper *,.kmc-panel *{box-sizing:border-box;font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,sans-serif;}
+.kmc-toggle-wrapper{position:fixed;bottom:28px;right:28px;z-index:9998;display:flex;align-items:center;gap:12px;}
+.kmc-toggle-label{background:var(--kmc-card);color:var(--kmc-text);padding:10px 18px;border-radius:100px;font-size:13px;font-weight:500;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid var(--kmc-border);white-space:nowrap;opacity:0;transform:translateX(8px);pointer-events:none;transition:opacity .25s ease,transform .25s ease;}
+.kmc-toggle-wrapper:has(.kmc-toggle-btn:hover) .kmc-toggle-label{opacity:1;transform:translateX(0);}
+.kmc-toggle-wrapper:has(.kmc-toggle-btn.open) .kmc-toggle-label{opacity:0;transform:translateX(8px);}
+.kmc-toggle-btn{width:52px;height:52px;border-radius:50%;background:#384168;border:1.5px solid rgba(255,255,255,.12);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(56,65,104,.4);transition:transform .25s ease,box-shadow .25s ease;flex-shrink:0;position:relative;padding:0;-webkit-tap-highlight-color:transparent;}
+.kmc-toggle-btn:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 6px 20px rgba(56,65,104,.5);}
+.kmc-toggle-btn svg{width:20px;height:20px;transition:opacity .2s ease,transform .2s ease;}
+.kmc-toggle-btn .kmc-icon-close{position:absolute;opacity:0;transform:scale(.7) rotate(90deg);}
+.kmc-toggle-btn.open .kmc-icon-chat{opacity:0;transform:scale(.7) rotate(-90deg);}
+.kmc-toggle-btn.open .kmc-icon-close{opacity:1;transform:scale(1) rotate(0deg);}
+.kmc-icon-chat{animation:kmcFlowerIdle 4s ease-in-out infinite;}
+.kmc-toggle-btn.open .kmc-icon-chat{animation:none;}
+@keyframes kmcFlowerIdle{
+  0%{transform:rotate(0deg) scale(1);}
+  20%{transform:rotate(15deg) scale(1.12);}
+  40%{transform:rotate(-10deg) scale(1.08);}
+  60%{transform:rotate(8deg) scale(1.1);}
+  80%{transform:rotate(-5deg) scale(1.05);}
+  100%{transform:rotate(0deg) scale(1);}
+}
+.kmc-toggle-btn::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(56,65,104,.35);animation:kmcRingPulse 3s ease-in-out infinite;pointer-events:none;}
+.kmc-toggle-btn.open::before{animation:none;opacity:0;}
+@keyframes kmcRingPulse{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(1.18);opacity:0;}}
+
+.kmc-panel{position:fixed;bottom:100px;right:28px;width:380px;max-width:calc(100vw - 40px);height:560px;max-height:calc(100vh - 140px);background:var(--kmc-card);color:var(--kmc-text);border-radius:20px;border:1px solid var(--kmc-border);box-shadow:0 20px 60px rgba(0,0,0,.18);z-index:9998;display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .25s cubic-bezier(.22,1,.36,1),transform .25s cubic-bezier(.22,1,.36,1);}
+.kmc-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+.kmc-header{display:flex;align-items:center;gap:12px;padding:18px 20px;border-bottom:1px solid var(--kmc-border);background:var(--kmc-bg2);flex-shrink:0;}
+.kmc-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:#384168;display:flex;align-items:center;justify-content:center;border:2px solid var(--kmc-card);box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;}
+.kmc-avatar img{width:26px;height:auto;display:block;filter:brightness(0) invert(1);}
+.kmc-header-info{flex:1;min-width:0;}
+.kmc-header-name{font-size:14px;font-weight:600;color:var(--kmc-text);}
+.kmc-header-sub{font-size:12px;color:var(--kmc-text3);margin-top:1px;}
+.kmc-body{flex:1;overflow-y:auto;padding:24px 16px 18px;display:flex;flex-direction:column;gap:2px;scroll-behavior:smooth;}
+.kmc-body::-webkit-scrollbar{width:5px;}
+.kmc-body::-webkit-scrollbar-thumb{background:var(--kmc-border);border-radius:10px;}
+.kmc-row{display:flex;animation:kmcMsgIn .28s cubic-bezier(.22,1,.36,1);margin-bottom:6px;}
+.kmc-row.bot{justify-content:flex-start;}
+.kmc-row.user{justify-content:flex-end;}
+@keyframes kmcMsgIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.kmc-bubble{max-width:86%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.55;}
+.kmc-row.bot .kmc-bubble{background:var(--kmc-bg2);color:var(--kmc-text);border-bottom-left-radius:4px;}
+.kmc-row.user .kmc-bubble{background:#384168;color:#fff;border-bottom-right-radius:4px;}
+.kmc-typing{display:inline-flex;align-items:center;gap:4px;background:var(--kmc-bg2);padding:12px 14px;border-radius:14px;border-bottom-left-radius:4px;}
+.kmc-typing span{width:6px;height:6px;border-radius:50%;background:var(--kmc-text3);animation:kmcBounce 1.2s infinite ease-in-out;}
+.kmc-typing span:nth-child(2){animation-delay:.15s;}
+.kmc-typing span:nth-child(3){animation-delay:.3s;}
+@keyframes kmcBounce{0%,60%,100%{transform:translateY(0);opacity:.5;}30%{transform:translateY(-4px);opacity:1;}}
+.kmc-options{display:flex;flex-direction:column;gap:8px;margin-top:2px;}
+.kmc-option-btn{display:block;width:100%;text-align:left;padding:10px 14px;background:var(--kmc-card);border:1.5px solid var(--kmc-border);border-radius:12px;font-size:13px;color:var(--kmc-text);text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s,transform .1s;opacity:0;animation:kmcMsgIn .3s cubic-bezier(.22,1,.36,1) forwards;-webkit-tap-highlight-color:transparent;}
+.kmc-option-btn:nth-child(1){animation-delay:.02s;}
+.kmc-option-btn:nth-child(2){animation-delay:.08s;}
+.kmc-option-btn:nth-child(3){animation-delay:.14s;}
+.kmc-option-btn:nth-child(4){animation-delay:.20s;}
+.kmc-option-btn:nth-child(5){animation-delay:.26s;}
+.kmc-option-btn:hover{border-color:#384168;background:var(--kmc-bg2);transform:translateX(2px);}
+.kmc-option-btn.action{background:#384168;border-color:#384168;color:#fff;font-weight:500;}
+.kmc-option-btn.action:hover{background:#2a3152;border-color:#2a3152;}
+.kmc-option-btn.quiet{background:transparent;border-style:dashed;color:var(--kmc-text3);}
+.kmc-option-btn.quiet:hover{color:#384168;}
+
+.kmc-ask{display:flex;gap:8px;padding:10px 16px 0;flex-shrink:0;background:var(--kmc-card);border-top:1px solid var(--kmc-border);}
+.kmc-ask input{flex:1;min-width:0;height:40px;padding:0 14px;border:1.5px solid var(--kmc-border);border-radius:100px;background:var(--kmc-bg2);color:var(--kmc-text);font-size:13px;outline:none;transition:border-color .15s;}
+.kmc-ask input:focus{border-color:#384168;}
+.kmc-ask button{width:40px;height:40px;flex-shrink:0;border:0;border-radius:50%;background:#384168;color:#fff;cursor:pointer;display:grid;place-items:center;padding:0;transition:background .2s;}
+.kmc-ask button:hover{background:#2a3152;}
+.kmc-footer{padding:10px 16px 16px;flex-shrink:0;background:var(--kmc-card);}
+.kmc-footer-note{font-size:11px;color:var(--kmc-text3);text-align:center;margin:0 0 8px;line-height:1.5;}
+.kmc-footer-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:11px 16px;background:#384168;color:#fff;border:none;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;transition:opacity .2s,transform .15s;-webkit-tap-highlight-color:transparent;}
+.kmc-footer-cta:hover{opacity:.85;transform:translateY(-1px);}
+@media(max-width:768px){.kmc-toggle-wrapper{bottom:20px;right:20px;}.kmc-toggle-label{display:none;}}
+@media(max-width:480px){.kmc-panel{right:16px;left:16px;width:auto;bottom:92px;height:70vh;}.kmc-toggle-wrapper{right:16px;bottom:20px;}}
+</style>
+
+<div class="kmc-toggle-wrapper">
+  <div class="kmc-toggle-label">Have a question?</div>
+  <button class="kmc-toggle-btn" id="kmcToggleBtn" aria-label="Open chat">
+    <svg class="kmc-icon-chat" width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="50" cy="27" rx="10" ry="19"/><ellipse cx="50" cy="27" rx="10" ry="19" transform="rotate(72 50 50)"/><ellipse cx="50" cy="27" rx="10" ry="19" transform="rotate(144 50 50)"/><ellipse cx="50" cy="27" rx="10" ry="19" transform="rotate(216 50 50)"/><ellipse cx="50" cy="27" rx="10" ry="19" transform="rotate(288 50 50)"/><circle cx="50" cy="50" r="6"/></svg>
+    <svg class="kmc-icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+<div class="kmc-panel" id="kmcPanel">
+  <div class="kmc-header">
+    <div class="kmc-avatar"><img src="images/aera-logo-black.png" alt="AERA"></div>
+    <div class="kmc-header-info">
+      <div class="kmc-header-name">AERA</div>
+      <div class="kmc-header-sub">Replies instantly</div>
+    </div>
+  </div>
+  <div class="kmc-body" id="kmcBody"></div>
+  <form class="kmc-ask" id="kmcForm" autocomplete="off">
+    <input type="text" id="kmcInput" placeholder="Type your question&hellip;" aria-label="Type your question">
+    <button type="submit" aria-label="Send">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </form>
+  <div class="kmc-footer">
+    <p class="kmc-footer-note">Have more questions? Message us directly.</p>
+    <a class="kmc-footer-cta" id="kmcContactBtn" href="https://www.facebook.com/thisisaera" target="_blank" rel="noopener">
+      Message us directly
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </a>
+  </div>
+</div>
+
+<script>
+(function(){
+/* ---------- SETTINGS ---------- */
+var FB_URL = 'https://www.facebook.com/thisisaera';   /* "Message us directly" goes here */
+var TRACK_URL = 'track-order.html';
+
+var MSG = { l:'Message us directly', url:FB_URL };
+
+/* Button types:  {l, url}  open a link
+                  {l, go:'#id'}  scroll to a section on the homepage
+                  {l, cat:'mist'|'soap'|'serum'}  filter the collection and scroll to it
+                  {l, node:'returnPolicy'}  show a chat message */
+var TOPICS = [
+  { id:'products', label:'Explore our products', intro:'What would you like to know about our products?',
+    qs:[
+      { q:'What products does AERA offer?', k:'collection items catalog sell mist serum soap',
+        a:['A little something for your everyday rituals. ✿ Our collection includes five Hair & Body Mists, a Body Serum and two soaps. Explore the collection to find your next favorite.'],
+        b:[{l:'Explore the collection', go:'#collection'}] },
+      { q:'How do I choose a scent?', k:'scent smell fragrance choose pick recommend which',
+        a:['Looking for a new favorite? Each of our five mists has its own personality. Visit the collection to explore them, or message us if you&rsquo;d like a little help choosing.'],
+        b:[{l:'Explore the mists', cat:'mist'},{l:'Ask us for help', url:FB_URL}] },
+      { q:'Can I use the mists on both my hair and body?', k:'hair body mist spray use',
+        a:['Yes! Our Hair & Body Mists are made for use on both hair and body. For the best experience, follow the directions on your product label.'], b:[] },
+      { q:'How do I use the Body Serum or soaps?', k:'serum soap directions instructions use apply',
+        a:['You&rsquo;ll find directions for each product on its label and product page. If you have a question before ordering, send us a message and we&rsquo;ll be happy to help.'],
+        b:[{l:'Message us directly', url:FB_URL}] }
+    ] },
+
+  { id:'orders', label:'Orders & payments', intro:'What would you like to know about orders and payments?',
+    qs:[
+      { q:'How do I place an order?', k:'order buy checkout purchase bag cart',
+        a:['Browse the collection, choose your favorites and add them to your bag. When you&rsquo;re ready, head to checkout and complete your order.'],
+        b:[{l:'Explore the collection', go:'#collection'}] },
+      { q:'What payment methods do you accept?', k:'payment pay gcash bpi maribank bank transfer',
+        a:['We accept GCash, BPI and Maribank. You&rsquo;ll see the payment details at checkout, and you&rsquo;ll upload a screenshot of your receipt to confirm your order.'], b:[] },
+      { q:'Can I change or cancel my order?', k:'change cancel edit modify refund',
+        a:['Need to make a change? Please message us as soon as possible with your order details. We&rsquo;ll check what we can do based on your order&rsquo;s status.'],
+        b:[{l:'Message us about my order', url:FB_URL}] },
+      { q:'How do I know if my order was received?', k:'received confirmation confirm placed receipt went through',
+        a:['After you pay, upload your receipt and tap Place Order to confirm. Your order isn&rsquo;t reserved until you complete that step. If you&rsquo;re unsure whether your order went through, send us a message and we&rsquo;ll help you check.'],
+        b:[{l:'Message us about my order', url:FB_URL}] }
+    ] },
+
+  { id:'shipping', label:'Shipping & delivery', intro:'What would you like to know about shipping and delivery?',
+    qs:[
+      { q:'Where do you deliver?', k:'deliver ship area nationwide location philippines province',
+        a:['We currently deliver nationwide. If you&rsquo;re unsure whether we can reach you, send us a message and we&rsquo;ll check.'],
+        b:[{l:'Message us directly', url:FB_URL}] },
+      { q:'How long will delivery take?', k:'long days time arrive when dispatch courier',
+        a:['Orders are packed within 3–5 business days. After that, delivery time depends on the courier and your destination. We&rsquo;ll share the details with you once your order is ready to ship.'], b:[] },
+      { q:'How much is shipping?', k:'shipping fee cost price rate how much',
+        a:['The shipping fee is calculated at checkout based on your delivery address:\n• Metro Manila &mdash; &#8369;80\n• Cavite, Rizal, Bulacan and other Luzon &mdash; &#8369;150\n• Visayas &mdash; &#8369;180\n• Mindanao &mdash; &#8369;200'], b:[] },
+      { q:'How can I track my order?', k:'track tracking status update where is parcel',
+        a:['You can check your order on our Track my order page. If you need help finding an update, message us with your order details.'],
+        b:[{l:'Track my order', url:TRACK_URL},{l:'Ask about my order', url:FB_URL}] }
+    ] },
+
+  { id:'circle', label:'AERA Circle', intro:'What would you like to know about AERA Circle?',
+    qs:[
+      { q:'What is AERA Circle?', k:'circle reseller community program',
+        a:['AERA Circle is our reseller community for individuals and businesses who want to share AERA with their own circles. It&rsquo;s a place to connect, learn and grow together.'],
+        b:[{l:'Discover AERA Circle', go:'#circle'}] },
+      { q:'What can Circle members look forward to?', k:'benefits perks members get priority training events community',
+        a:['There&rsquo;s a little more to look forward to as part of the Circle. Members can enjoy priority restocks, training and coaching, exclusive events, and a private community where they can connect and share ideas.'], b:[] },
+      { q:'How do I join AERA Circle?', k:'join apply application become reseller sign up',
+        a:['We&rsquo;d love to have you explore the Circle! Visit our AERA Circle page to learn about the program and submit an application. Our team will review it and get in touch about the next steps.'],
+        b:[{l:'Explore AERA Circle', go:'#circle'}] },
+      { q:'What are the reseller tiers?', k:'tiers tier discount minimum levels',
+        a:['AERA Circle has three public tiers, with different order requirements and purchase discounts. You can find the full details on our Circle page.'],
+        b:[{l:'View the tiers', go:'#circle'}] },
+      { q:'Is shipping free for Circle orders?', k:'free shipping circle reseller fee',
+        a:['Shipping is charged separately from your product order. Our team will share the applicable shipping fee with you when your order is arranged.'], b:[] }
+    ] },
+
+  { id:'returns', label:'Returns & order concerns', intro:'What would you like to know about returns and order concerns?',
+    qs:[
+      { q:'What if my order arrives damaged or incorrect?', k:'damaged wrong incorrect broken missing problem issue concern complaint',
+        a:['We&rsquo;re sorry something isn&rsquo;t quite right. Please message us with your order number and photos of the item and packaging, and we&rsquo;ll help you with the next steps.'],
+        b:[{l:'Get help with my order', url:FB_URL}] },
+      { q:'Can I return or exchange an item?', k:'return exchange refund policy',
+        a:['If you need help with an order, message us and we&rsquo;ll guide you. You can also check our return policy below.'],
+        b:[{l:'View return policy', node:'returnPolicy'},{l:'Message us directly', url:FB_URL}] }
+    ] }
+];
+
+var RETURN_POLICY = [
+  'Once an order is placed, it can&rsquo;t be cancelled or refunded.',
+  'If your item arrives damaged or incorrect, please contact us within 7 days of delivery with your order number and photos or an unboxing video, and we&rsquo;ll help you with the next steps.'
+];
+
+var FALLBACK = ['Hmm, we don&rsquo;t want to guess and give you the wrong information. Send us a message and our team will be happy to help. ✿'];
+
+/* ---------- ENGINE ---------- */
+var toggleBtn=document.getElementById('kmcToggleBtn');
+var panel=document.getElementById('kmcPanel');
+var body=document.getElementById('kmcBody');
+var form=document.getElementById('kmcForm');
+var input=document.getElementById('kmcInput');
+var pending=[];
+var started=false, isOpen=false;
+
+function scrollBottom(){body.scrollTop=body.scrollHeight;}
+function clearPending(){pending.forEach(clearTimeout);pending=[];}
+
+function addBot(text){
+  var row=document.createElement('div');row.className='kmc-row bot';
+  var b=document.createElement('div');b.className='kmc-bubble';
+  b.textContent=text;b.style.whiteSpace='pre-line';
+  row.appendChild(b);body.appendChild(row);scrollBottom();
+}
+function addUser(text){
+  var row=document.createElement('div');row.className='kmc-row user';
+  var b=document.createElement('div');b.className='kmc-bubble';
+  b.textContent=text;row.appendChild(b);body.appendChild(row);scrollBottom();
+}
+function showTyping(){
+  var row=document.createElement('div');row.className='kmc-row bot';row.id='kmcTypingRow';
+  row.innerHTML='<div class="kmc-typing"><span></span><span></span><span></span></div>';
+  body.appendChild(row);scrollBottom();
+}
+function removeTyping(){var r=document.getElementById('kmcTypingRow');if(r)r.remove();}
+function removeOptions(){var o=body.querySelector('.kmc-options');if(o)o.remove();}
+
+/* say several lines one after another, then run done() */
+function say(lines, done){
+  clearPending();removeTyping();removeOptions();showTyping();
+  var delay=500;
+  lines.forEach(function(line,i){
+    pending.push(setTimeout(function(){
+      removeTyping();addBot(line);
+      if(i<lines.length-1) showTyping();
+      else if(done) pending.push(setTimeout(done,250));
+    },delay));
+    delay+=550;
+  });
+}
+
+function closeChat(){
+  isOpen=false;panel.classList.remove('open');toggleBtn.classList.remove('open');
+  toggleBtn.setAttribute('aria-label','Open chat');
+}
+function openChat(){
+  isOpen=true;panel.classList.add('open');toggleBtn.classList.add('open');
+  toggleBtn.setAttribute('aria-label','Close chat');
+  if(!started){started=true;showWelcome();}
+}
+
+/* ---------- ACTIONS ---------- */
+function goTo(sel){
+  closeChat();
+  var el=document.querySelector(sel);
+  if(el) el.scrollIntoView({behavior:'smooth'});
+  else location.href='index.html'+sel;
+}
+function filterCollection(cat){
+  closeChat();
+  var t=document.querySelector('.cat-tab[data-cat="'+cat+'"]');
+  if(t) t.click();
+  var el=document.getElementById('collection');
+  if(el) el.scrollIntoView({behavior:'smooth'});
+  else location.href='index.html#collection';
+}
+
+/* option builders */
+function btn(label, cls, onClick){
+  var el=document.createElement('button');
+  el.type='button';el.className='kmc-option-btn '+cls;el.textContent=label;
+  el.addEventListener('click',onClick);return el;
+}
+function link(label, href){
+  var el=document.createElement('a');
+  el.className='kmc-option-btn action';el.textContent=label+' →';el.href=href;
+  if(/^https?:/.test(href)){el.target='_blank';el.rel='noopener';}
+  return el;
+}
+function renderOptions(items){
+  removeOptions();
+  var wrap=document.createElement('div');wrap.className='kmc-options';
+  items.forEach(function(i){wrap.appendChild(i);});
+  body.appendChild(wrap);scrollBottom();
+}
+function actionButton(b){
+  if(b.url) return link(b.l,b.url);
+  if(b.go) return btn(b.l+' →','action',function(){goTo(b.go);});
+  if(b.cat) return btn(b.l+' →','action',function(){filterCollection(b.cat);});
+  if(b.node) return btn(b.l,'action',function(){
+    addUser(b.l);
+    say(RETURN_POLICY,function(){renderOptions([link(MSG.l,MSG.url),backBtn()]);});
+  });
+}
+
+/* ---------- FLOW ---------- */
+function backBtn(){return btn('← Back to topics','quiet',function(){addUser('Back to topics');showTopics();});}
+
+function showWelcome(){
+  say(['Hi, lovely! Welcome to AERA ✿',
+       'Looking for a new favorite, need help with an order, or curious about AERA Circle? Choose a topic below and we&rsquo;ll help you find your way.'],
+      renderTopics);
+}
+function renderTopics(){
+  renderOptions(TOPICS.map(function(t){
+    return btn(t.label,'',function(){addUser(t.label);showTopic(t);});
+  }));
+}
+function showTopics(){
+  say(['What else can we help you with? Choose a topic below.'],renderTopics);
+}
+function showTopic(t){
+  say([t.intro],function(){renderTopicQuestions(t);});
+}
+function renderTopicQuestions(t){
+  var items=t.qs.map(function(q){
+    return btn(q.q,'',function(){addUser(q.q);showAnswer(t,q);});
+  });
+  items.push(backBtn());
+  renderOptions(items);
+}
+function showAnswer(t,q){
+  say(q.a,function(){
+    var items=(q.b||[]).map(actionButton).filter(Boolean);
+   items.push(btn('More questions about this topic','quiet',function(){addUser('More questions');showTopic(t);}));
+    items.push(backBtn());
+    renderOptions(items);
+  });
+}
+function showFallback(){
+  say(FALLBACK,function(){renderOptions([link(MSG.l,MSG.url),backBtn()]);});
+}
+
+/* ---------- TYPED QUESTIONS (simple keyword match) ---------- */
+var STOP=' the how can you and for what does are your with from have that this will use get our any about want need '.split(' ');
+function findMatch(text){
+  var words=(text.toLowerCase().match(/[a-z]{3,}/g)||[]).filter(function(w){return STOP.indexOf(w)<0;});
+  if(!words.length) return null;
+  var best=null,bestScore=0;
+  TOPICS.forEach(function(t){
+    t.qs.forEach(function(q){
+      var hay=(q.q+' '+q.k).toLowerCase(),s=0;
+      words.forEach(function(w){if(hay.indexOf(w)>-1)s++;});
+      if(s>bestScore){bestScore=s;best={t:t,q:q};}
+    });
+  });
+  return best;
+}
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var text=input.value.trim();
+  if(!text) return;
+  input.value='';
+  addUser(text);
+  var m=findMatch(text);
+  if(m) showAnswer(m.t,m.q); else showFallback();
+});
+
+/* ---------- OPEN / CLOSE ---------- */
+toggleBtn.addEventListener('click',function(){isOpen?closeChat():openChat();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen)closeChat();});
+
+/* hide the chat bubble while the cart drawer is open */
+(function(){
+  var cd=document.getElementById('cartDrawer');
+  if(!cd) return;
+  var mo=new MutationObserver(function(){
+    var wrapper=document.querySelector('.kmc-toggle-wrapper');
+    if(wrapper) wrapper.style.display=cd.classList.contains('open')?'none':'';
+  });
+  mo.observe(cd,{attributes:true,attributeFilter:['class']});
+})();
+})();
+</script>
+
+</body></html>

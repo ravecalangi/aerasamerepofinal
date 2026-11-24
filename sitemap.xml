@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main site pages -->
+  <sitemap>
+    <loc>https://www.shop-aera.com/sitemap-pages.xml</loc>
+    <lastmod>2026-11-24</lastmod>
+  </sitemap>
+
+  <!-- Blog articles -->
+  <sitemap>
+    <loc>https://www.shop-aera.com/sitemap-blogs.xml</loc>
+    <lastmod>2026-11-24</lastmod>
+  </sitemap>
+
+</sitemapindex>
